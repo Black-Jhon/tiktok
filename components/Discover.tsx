@@ -1,27 +1,32 @@
-import React from 'react';
-import {topics} from "../utils/constants";
+import React from "react";
+import {NextPage} from "next";
 import Link from "next/link";
 import {useRouter} from "next/router";
 
-const Discover = () => {
+import {topics} from "../utils/constants";
+
+const Discover: NextPage = () => {
     const router = useRouter();
     const {topic} = router.query;
 
-    const activeTopicStyle = 'xl:border-2 hover:bg-primary xl:border-[#631720] px-3 py-2 ' +
-        'rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-[#631720]';
-
-    const topicStyle = 'xl:border-2 hover:bg-primary xl:border-gray-300 px-3 py-2 ' +
-        'rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-black'
+    const activeTopicStyle = "xl:border-2 hover:bg-primary xl:border-[#F51997] px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-[#F51997]";
+    const topicStyle = "xl:border-2 hover:bg-primary xl:border-gray-300 px-3 py-2 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer text-black";
 
     return (
-        <div className='xl:border-b-2 xl:border-gray-200 py-6'>
-            <p className='text-gray-500 font-semibold capitalize m-3 mt-4 xl:block hidden'>popular topics</p>
+        <div className="xl:border-b-2 xl:border-gray-200 pb-6">
+            <p className="text-gray-500 font-semibold m-3 mt-4 hidden xl:block">
+                Popular Topics
+            </p>
             <div className="flex gap-3 flex-wrap">
-                {topics.map((item) => (
+                {topics?.map((item) => (
                     <Link href={`/?topic=${item.name}`} key={item.name}>
                         <div className={topic === item.name ? activeTopicStyle : topicStyle}>
-                            <span className='font-bold text-2xl xl:text-md'>{item.icon}</span>
-                            <span className='font-medium text-md xl:block hidden'>{item.name}</span>
+              <span className="font-bold text-2xl xl:text-md ">
+                {item.icon}
+              </span>
+                            <span className={`font-medium text-md hidden xl:block capitalize`}>
+                {item.name}
+              </span>
                         </div>
                     </Link>
                 ))}
