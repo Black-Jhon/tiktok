@@ -24,7 +24,7 @@ const Home = ({videos}: IProps) => {
 
 export default Home;
 
-export const getServerSideProps = async ({query: {topic},}: { query: { topic: string }; }) => {
+export const getServerSideProps = async ({query: {topic}}: { query: { topic: string }; }) => {
     let response = await axios.get(`${BASE_URL}/api/post`);
 
     if (topic) {

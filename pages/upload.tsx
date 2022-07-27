@@ -109,7 +109,7 @@ const Upload = () => {
                                                 <p className="font-bold text-xl">
                                                     <FaCloudUploadAlt className="text-gray-300 text-6xl"/>
                                                 </p>
-                                                <p className="text-xl font-semibold">
+                                                <p className="text-xl font-semibold text-center">
                                                     Select video to upload
                                                 </p>
                                             </div>
