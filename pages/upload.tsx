@@ -95,7 +95,7 @@ const Upload = () => {
                         <p className="text-md text-gray-400 mt-1">Post a video to your account</p>
                     </div>
                     <div
-                        className=" border-dashed rounded-xl border-4 border-gray-200 flex flex-col justify-center items-center  outline-none mt-10 w-[260px] h-[458px] p-10 cursor-pointer hover:border-red-300 hover:bg-gray-100">
+                        className=" border-dashed rounded-xl border-4 border-gray-200 flex flex-col justify-center items-center  outline-none mt-10 w-[260px] h-[458px] p-10 cursor-pointer hover:border-red-900 hover:bg-gray-100">
                         {loading ? (
                             <p className="text-center text-3xl text-red-400 font-semibold">
                                 Uploading...
@@ -120,7 +120,7 @@ const Upload = () => {
                                                 Up to 10 minutes <br/>
                                                 Less than 2 GB
                                             </p>
-                                            <p className="bg-[#F51997] text-center mt-8 rounded text-white text-md font-medium p-2 w-52 outline-none">
+                                            <p className="bg-[#7f1d1d] text-center mt-8 rounded text-white text-md font-medium p-2 w-52 outline-none">
                                                 Select file
                                             </p>
                                         </div>
@@ -199,7 +199,7 @@ const Upload = () => {
                             disabled={videoAsset?.url ? false : true}
                             onClick={handlePost}
                             type="button"
-                            className="bg-[#F51997] text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none"
+                            className="bg-[#7f1d1d] text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none"
                         >
                             {savingPost ? "Posting..." : "Post"}
                         </button>

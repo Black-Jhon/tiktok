@@ -15,7 +15,7 @@ const Sidebar: NextPage = () => {
     const {pathname} = useRouter();
     const {fetchAllUsers, allUsers}: any = useAuthStore();
 
-    const activeLink = "flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#F51997] rounded";
+    const activeLink = "flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#7f1d1d] rounded";
 
     const normalLink = "flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold rounded";
 
@@ -37,8 +37,8 @@ const Sidebar: NextPage = () => {
                                     <AiFillHome/>
                                 </p>
                                 <span className="capitalize text-xl hidden xl:block">
-                  For You
-                </span>
+                                    For You
+                                 </span>
                             </div>
                         </Link>
                     </div>
