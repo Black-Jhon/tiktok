@@ -16,7 +16,6 @@ const Sidebar: NextPage = () => {
     const {fetchAllUsers, allUsers}: any = useAuthStore();
 
     const activeLink = "flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold text-[#7f1d1d] rounded";
-
     const normalLink = "flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold rounded";
 
     return (
