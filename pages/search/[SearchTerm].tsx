@@ -14,7 +14,6 @@ const Search = ({videos}: { videos: Video[] }) => {
     const [isAccount, setIsAccount] = useState(false);
     const router = useRouter();
     const {searchTerm}: any = router.query;
-    // console.log(searchTerm);
 
     const {allUsers} = useAuthStore();
 
