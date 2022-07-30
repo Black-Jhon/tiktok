@@ -3,12 +3,12 @@ import axios from "axios";
 import { BASE_URL } from "../../utils";
 import { IUser, Video } from "../../types";
 import { useRouter } from "next/router";
-import NoResults from "../../components/NoResults";
 import VideoCard from "../../components/VideoCard";
 import useAuthStore from "../../store/authStore";
 import Image from "next/image";
 import { GoVerified } from "react-icons/go";
 import Link from "next/link";
+import NoResults from "../../components/NoResults";
 
 const Search = ({ videos }: { videos: Video[] }) => {
   const [isAccount, setIsAccount] = useState(false);
@@ -16,7 +16,8 @@ const Search = ({ videos }: { videos: Video[] }) => {
   const { searchTerm }: any = router.query;
   // console.log(videos);
 
-  const { allUsers } = useAuthStore();
+  const { allUsers }: { allUsers: IUser[] } = useAuthStore();
+  // console.log(allUsers);
 
   const account = isAccount ? "border-b-2 border-black" : "text-gray-400";
   const isVideos = !isAccount ? "border-b-2 border-black" : "text-gray-400";
